@@ -16,10 +16,7 @@
         </div>
         <div class="row">
             <div class="col-md-8" data-ng-controller="personDetails" id="blue">
-                <input data-ng-model="test" placeholder=
-                "Type to filter details" type="text">
                 <table border="2" width="80%">
-                {{text}}
                 <div id="green">
                     
                 </div>
@@ -28,14 +25,14 @@
                         <th>Age</th>
                         <th>Img Url</th>
                     </tr>
-                    <tr data-ng-repeat="x in details | filter:test">
-                        <td>{{x.name}}</td>
-                        <td>{{x.age}}</td>
-                        <td>{{x.img_url}}</td>
+                    <tr data-ng-repeat="finerDetails in details | filter: finerDetails">
+                        <td>{{finerDetails.name}}</td>
+                        <td>{{finerDetails.age}}</td>
+                        <td>{{finerDetails.img_url}}</td>
                     </tr>
                 </table>
             </div>
-            <div class="col-md-4" id="yellow"></div>
+            <div class="col-md-4" id="yellow"><input type="text" placeholder="Type to filter results" ng-model="finerDetails"/></div>
         </div>
     </section>
    
